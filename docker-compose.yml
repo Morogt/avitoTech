@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  avito-tech:
+    build: ./
+    command: ./wait-for-postgres.sh db ./avito-tech
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DB_PASSWORD=hza90plm
+
+  db:
+    restart: always
+    image: postgres:latest
+    volumes:
+      - ./.database/postgres/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=hza90plm
+    ports:
+      - 5436:5432
