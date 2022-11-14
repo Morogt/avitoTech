@@ -9,6 +9,7 @@
 
 
 Body:
+
 {
     "id": 1,
     "balance": 0
