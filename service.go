@@ -11,7 +11,7 @@ type Service struct {
 
 type Report struct {
 	ID     uint64  `json:"id" db:"id" binding:"required"`
-	Amount float64 `json:"title" binding:"required"`
+	Amount float64 `json:"amount" binding:"required"`
 }
 
 type History struct {
