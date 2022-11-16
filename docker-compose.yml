@@ -9,7 +9,7 @@ services:
     depends_on:
       - db
     environment:
-      - DB_PASSWORD=hza90plm
+      - DB_PASSWORD=postgres
 
   db:
     restart: always
@@ -17,6 +17,6 @@ services:
     volumes:
       - ./.database/postgres/data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=hza90plm
+      - POSTGRES_PASSWORD=postgres
     ports:
       - 5436:5432
